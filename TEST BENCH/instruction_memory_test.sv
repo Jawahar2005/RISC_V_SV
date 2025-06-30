@@ -16,7 +16,7 @@ class Instruction_Memory_Verification;
   task instruction_memory_test();
     
 
-    $display("[%0t]\n === INSTRUCTION MEMORY VERIFICATION START ===", $time);
+    $display("\n[%0t] === INSTRUCTION MEMORY VERIFICATION START ===", $time);
 
     $readmemb("test.prog", expected_memory, 0, 14);
 
