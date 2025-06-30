@@ -30,10 +30,10 @@ class Control_Unit_Random_test;
           vif.reg_dst     == exp_reg_dst &&
           vif.mem_to_reg  == exp_mem_to_reg &&
           vif.reg_write   == exp_reg_write) begin
-        $display("PASS: %s (opcode=%b)", name, opcode_val);
+        $display("[%0t] PASS: %s (opcode=%b)",$time, name, opcode_val);
         pass_count++;
       end else begin
-        $display("FAIL: %s (opcode=%b)", name, opcode_val);
+        $display("[%0t] FAIL: %s (opcode=%b)",$time, name, opcode_val);
         $display("  Got     : alu_op=%b jump=%b beq=%b bne=%b mem_read=%b mem_write=%b alu_src=%b reg_dst=%b mem_to_reg=%b reg_write=%b",
                  vif.alu_op, vif.jump, vif.beq, vif.bne, vif.mem_read, vif.mem_write,
                  vif.alu_src, vif.reg_dst, vif.mem_to_reg, vif.reg_write);
